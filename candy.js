@@ -19,6 +19,7 @@ window.onload = function() {
     window.setInterval(function(){
         //crushCandy();
         slideCandy();
+        slideCandyLeft();
         //generateCandy();
     }, 100);
 }
@@ -84,8 +85,6 @@ function mouseLeave() {
             unhighlightCluster(clusterlist);
         }
     }
-
-
 }
 
 function mouseClick() {
@@ -246,6 +245,31 @@ function slideCandy() {
             board[r][c].src = "./images/blank.png";
         }
     }
+}
+
+function slideCandyLeft() {
+    let ind;
+    for (let c = 0; c < columns; c++) {
+        if (board[rows-1][c].src.includes("blank")) {
+            if (ind == null) {
+                ind = c;
+            }
+        } else {
+            if (ind) {
+                console.log("slide left, blank at column " + ind)
+                break;
+            }
+        }
+    }
+    if (ind < columns) {
+        for (r = 0; r < rows; r++) {
+            for (c = ind; c < columns - 1; c++) {
+                board[r][c].src = board[r][c + 1].src;
+            }
+            board[r][columns - 1].src = "./images/blank.png"; // change the last column to blanks
+        }
+    }
+
 }
 
 function generateCandy() {
