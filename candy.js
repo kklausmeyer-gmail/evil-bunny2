@@ -1,7 +1,7 @@
 // From https://www.youtube.com/watch?v=8yIKZQMGi0A&t=2s
 // 10/9/26- stopped at 30:34
 //var candies = ["Blue", "Orange", "Green", "Yellow", "Red", "Purple"];
-var candies = ["evil-bunny-blue-1", "evil-bunny-red-1", "evil-bunny-cabbage-1", "evil-bunny-carrot-1", "evil-bunny-cabbage-1"];
+var candies = ["evil-bunny-blue-1", "evil-bunny-red-1", "evil-bunny-cabbage-1", "evil-bunny-carrot-1", "evil-bunny-mushroom-1"];
 var board = [];
 var rows = 12;
 var columns = 20;
